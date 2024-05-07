@@ -21,6 +21,7 @@ urlencode() (
 DEFAULT_POLL_TIMEOUT=10
 POLL_TIMEOUT=${POLL_TIMEOUT:-$DEFAULT_POLL_TIMEOUT}
 
+sh -c "git config --global http.sslVerify false"
 sh -c "git config --global --add safe.directory /github/workspace"
 git checkout "$GITHUB_REF_NAME"
 
